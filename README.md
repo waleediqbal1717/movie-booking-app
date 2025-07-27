@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# Movie Booking App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native movie booking application built with Expo, featuring upcoming movies from TMDB API, movie details, trailer playback, and seat booking functionality.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Movie List**: Browse upcoming movies from TMDB API
+- **Movie Details**: View detailed information about movies
+- **Trailer Playback**: Watch movie trailers in full-screen mode
+- **Search**: Search for movies with category browsing
+- **Seat Booking**: Interactive seat selection with pricing
+- **Responsive Design**: Works on all screen sizes and orientations
+- **Redux State Management**: Using RTK Query and Redux Persist
 
+## Tech Stack
+
+- **React Native** with Expo
+- **TypeScript** for type safety
+- **Redux Toolkit** with RTK Query for state management
+- **Redux Persist** for state persistence
+- **Expo Router** for navigation
+- **Expo AV** for video playback
+- **Expo Linear Gradient** for UI effects
+
+## Project Structure
+
+```
+├── app/                    # Expo Router screens
+│   ├── (tabs)/            # Tab navigation screens
+│   ├── movie-detail.tsx   # Movie detail screen
+│   ├── search.tsx         # Search screen
+│   ├── booking.tsx        # Booking screen
+│   └── payment.tsx        # Payment screen
+├── components/            # Reusable components
+│   ├── common/           # Common UI components
+│   └── screens/          # Screen components
+├── constants/            # App constants and theme
+├── store/               # Redux store configuration
+├── types/               # TypeScript type definitions
+└── utils/               # Utility functions
+```
+
+## Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd movie-booking-app
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run on device/simulator**
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
+   - Scan QR code with Expo Go app on your device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## API Configuration
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The app uses TMDB API for movie data. The API key is configured in `utils/api.ts`. You can get your own API key from [TMDB](https://www.themoviedb.org/settings/api).
 
-## Get a fresh project
+## Key Features Implementation
 
-When you're ready, run:
+### Redux RTK Query
+- Centralized API calls for movie data
+- Automatic caching and state management
+- Optimistic updates and error handling
 
-```bash
-npm run reset-project
-```
+### Responsive Design
+- Adaptive layouts for different screen sizes
+- Landscape and portrait mode support
+- Flexible grid systems
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### TypeScript
+- Comprehensive type definitions
+- Type-safe API responses
+- Strict type checking throughout the app
 
-## Learn more
+### Navigation
+- Tab-based navigation for main sections
+- Stack navigation for detailed screens
+- Deep linking support
 
-To learn more about developing your project with Expo, look at the following resources:
+## Screens
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. **Movie List Screen**: Displays upcoming movies in a grid layout
+2. **Movie Detail Screen**: Shows movie information with trailer playback
+3. **Search Screen**: Search functionality with category browsing
+4. **Booking Screen**: Date, time, and seat selection
+5. **Payment Screen**: Booking confirmation and payment
 
-## Join the community
+## Contributing
 
-Join our community of developers creating universal apps.
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+
+This project is licensed under the MIT License.

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "movie-booking",
+    "name": "Movie Booking",
     "slug": "movie-booking",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.moviebooking"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "59fc8c2d-7394-43e7-8399-ee53fc41da47"
+      }
     }
   }
 }
